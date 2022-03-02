@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Agenda</string>
+    <string name="label_lista_alunos">Lista de Alunos</string>
+    <string name="label_add_alunos">Cadastrar Aluno</string>
+    <string name="label_salvar">Salvar</string>
+    <string name="label_nome_completo">Nome Completo</string>
+    <string name="label_telefone">Telefone</string>
+    <string name="label_email">E-mail</string>
+    <string name="label_adicionar_aluno">Adicionar Aluno</string>
+</resources>
