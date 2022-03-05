@@ -2,7 +2,10 @@ package com.example.agenda.model;
 
 import androidx.annotation.NonNull;
 
-public class Aluno {
+import java.io.Serializable;
+
+public class Aluno implements Serializable {
+
     private final String nomeCompleto;
     private final String telefone;
     private final String email;
@@ -11,6 +14,18 @@ public class Aluno {
         this.nomeCompleto = nomeCompleto;
         this.telefone = telefone;
         this.email = email;
+    }
+
+    public String getNomeCompleto() {
+        return nomeCompleto;
+    }
+
+    public String getTelefone() {
+        return telefone;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     @NonNull

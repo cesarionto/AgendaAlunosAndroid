@@ -13,6 +13,8 @@ import com.example.agenda.R;
 import com.example.agenda.dao.AlunoDAO;
 import com.example.agenda.model.Aluno;
 
+import java.io.Serializable;
+
 public class FormularioAlunoActivity extends AppCompatActivity {
 
     private EditText campoNome;
@@ -28,11 +30,20 @@ public class FormularioAlunoActivity extends AppCompatActivity {
         setTitle(R.string.label_add_alunos);
         inicializaCampos();
         configuraBotaoSalvar();
+       // if()
+        vaiParaTelaEdicaoAluno();
+    }
+
+    private void vaiParaTelaEdicaoAluno() {
+        Intent dados = getIntent();
+        Aluno aluno = (Aluno) dados.getSerializableExtra("aluno");
+        campoNome.setText(aluno.getNomeCompleto());
+        campoTelefone.setText(aluno.getTelefone());
+        campoEmail.setText(aluno.getEmail());
     }
 
     private void configuraBotaoSalvar() {
         Button buttonSalvar = findViewById(R.id.activity_formulario_aluno_botao_salvar);
-
         buttonSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
